@@ -15,7 +15,7 @@ Plug 'othree/html5.vim', {'for': 'html'}
 Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
 call plug#end()
 
-colorscheme dracula
+colorscheme gruvbox
 set background=dark
 
 set hidden
@@ -39,23 +39,30 @@ set shiftwidth=4
 set smartindent
 set smarttab	
 set softtabstop=4	
-
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 set ruler	
  
 set undolevels=1000	
 set backspace=indent,eol,start
 
 let mapleader="\<space>"
-nnoremap <leader>; A;<esc> # Colocar ; no final da linha
-nnoremap <leader>ev :vsplit ~/.vimrc<cr> #abrir a vim config
-nnoremap <leader>sv :source ~/.vimrc<cr> #abrir a vim config
+nnoremap <leader>; A;<esc>
+nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>  
+nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 
+"--shift up and down line--
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 " -- NERDTree ------------
 let g:NERDTreeWinSize = 28
 nnoremap <D-O> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>p :NERDTreeToggle<CR> #Telca leader+p abre a arvore
-nnoremap <leader>o :NERDTreeFind<CR>	$Tecla leader+o abre o arquivo atual na arvore
+nnoremap <leader>o :NERDTreeFind<CR>	#Tecla leader+o abre o arquivo atual na arvore
 "let g:nerdtree_tabs_open_on_gui_startup = 0
 " -- NERDTree end ------------
 
@@ -73,4 +80,4 @@ let g:neoformat_enabled_javascript = ['standard']
 " }}}
 
 "------- json ----------
-let g:vim_json_syntax_conceal = 2
+let g:vim_json_synitax_conceal = 2
