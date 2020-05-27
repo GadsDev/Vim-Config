@@ -1,5 +1,5 @@
 # nvim
 
-cd ~/.config/nvim
-nvim another file
-Run :PlugInstall
+- cd ~/.config/nvim
+- nvim another file
+- Run :PlugInstall
